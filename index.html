@@ -508,41 +508,6 @@
             </div>
           </div><!-- End Team Member -->
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team_4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Kambou Gombson</h4>
-                <span>Ingenieur en Informatique(developeur full stack)</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.jpeg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Karambiri Arnold</h4>
-                <span>Ingenieur en Informatique(developeur full stack)</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
@@ -587,34 +552,83 @@
     </section><!-- /Team Section -->
 
     <!-- Contact Section -->
-    <section class="contact">
-      <div class="contact-container">
-          <h2>Contacter nous</h2>
-          <div class="contact-wrapper">
-              <div class="contact-form">
-                  <h3>Envoyer nous un message</h3>
-                  <form action="" method="post">
-                      <div class="form-group">
-                          <input type="text" name="nom" placeholder="Entrer votre nom" class="input-contact">
-                      </div>
-                      <div class="form-group">
-                          <input type="email" name="email" placeholder="Entrer votre Email" class="input-contact">
-                      </div>
-                      <div class="form-group">
-                          <textarea name="message" placeholder="Votre suggestion" class="textarea-contact"></textarea>
-                      </div>
-                      <button type="button">Envoyer</button>
-                  </form>
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contacter Nous</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75755.22696603504!2d-4.343747996482582!3d11.176085438268421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe34fb9f7d86d13f%3A0xa0e9136b20d27170!2sBobo-Dioulasso%2C%20Burkina%20Faso!5e1!3m2!1sen!2sus!4v1730515010547!5m2!1sen!2sus" width="1300" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Burkina Faso,Bobo-dioulasso belle-ville</p>
               </div>
-              <div class="contact-info">
-                  <h3>Contact Information</h3>
-                  <p><i class="fas fa-phone"></i>+226 54035131</p>
-                  <p><i class="fas fa-envelope"></i>Email : dissazangaalain@gmail.com</p>
-                  <p><i class="fas fa-map-marker-alt"></i>Adresse : Bobo Dioulasso, Belle-ville</p>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Appeler Nous</h3>
+                <p>+226 57 29 63 34</p>
               </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Notre Email</h3>
+                <p>abpedd@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
           </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Votre nom complet" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="votre Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Sujet" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <button type="submit">envoyer message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
       </div>
-  </section>
+
+    </section><!-- /Contact Section -->
   
     <section id="don" class="don-section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
