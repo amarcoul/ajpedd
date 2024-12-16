@@ -2330,3 +2330,74 @@ section,
 .join-section button:hover {
   background: #45a049;
 }
+
+
+.contact{
+  min-height: 100vh;
+  background-color: #e8f0fe;
+  margin-top: 3vh;
+  text-align: center;
+}
+.contact-container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+.contact-container h2{
+  padding: 80px;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: black;
+}
+.contact-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+.contact-form{
+  text-align: left;
+}
+.contact-form h3{
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black;
+}
+.form-group{
+  margin-bottom: 20px;   
+}
+.input-contact,.textarea-contact{
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-family: bold;
+}
+.input-contact:focus,.textarea-contact:focus{
+  outline: none;
+  box-shadow: 0 0 8px #bbb;
+}
+.contact-info{
+  text-align: left;
+}
+.contact-info h3{
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black;
+}
+.contact-info p{
+  margin-bottom: 10px;
+  color: black;
+}
+.contact-info i{
+  color: #FFA500;
+  margin-right: 10px;
+}
+@media screen and (max-width: 768px){
+  .contact-container{
+      padding: 20px;
+  }
+  .contact-wrapper{
+      grid-template-columns: 1fr;
+  }
+}
