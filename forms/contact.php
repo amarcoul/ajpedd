@@ -1,44 +1,56 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Adresse email de réception (remplacez par votre email)
-    $to = "esistackoverflow@gmail.com";
-    $from_name = strip_tags(trim($_POST["name"]));
-    $from_email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $subject = strip_tags(trim($_POST["subject"]));
-    $message = htmlspecialchars(trim($_POST["message"]));
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
+
+require '../vendor/autoload.php'; // Charge les classes de PHPMailer et Dotenv
+
+// Charge les variables d'environnement
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Récupérer les données du formulaire
+    $name = htmlspecialchars($_POST['name']); // Sécurisation des entrées utilisateur
+    $userEmail = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL); // Validation de l'email
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = htmlspecialchars($_POST['message']);
     
-    // Validation des champs
-    if (empty($from_name) || empty($from_email) || empty($subject) || empty($message)) {
-        echo "Veuillez remplir tous les champs.";
+    if (!$userEmail) {
+        echo "Adresse e-mail invalide.";
         exit;
     }
 
-    if (!filter_var($from_email, FILTER_VALIDATE_EMAIL)) {
-        echo "L'adresse email n'est pas valide.";
-        exit;
-    }
+    // Configuration de PHPMailer
+    $mail = new PHPMailer(true);
+    try {
+        // Paramètres du serveur
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; // Hôte SMTP pour Gmail
+        $mail->SMTPAuth = true;
+        $mail->Username = $_ENV['MAIL_USERNAME']; // Votre e-mail depuis .env
+        $mail->Password = $_ENV['MAIL_PASSWORD']; // Votre mot de passe ou clé d'application depuis .env
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
 
-    // Structure de l'email
-    $email_subject = "Nouveau message de contact : $subject";
-    $email_body = "Vous avez reçu un nouveau message de votre site web.\n\n" .
-                  "Nom : $from_name\n" .
-                  "Email : $from_email\n\n" .
-                  "Sujet : $subject\n\n" .
-                  "Message :\n$message\n";
+        // Paramètres de l'e-mail
+        $mail->setFrom($_ENV['MAIL_USERNAME'], 'Bily Karambiri'); // Adresse e-mail de l'expéditeur
+        $mail->addReplyTo($userEmail, $name); // Pour permettre une réponse directe à l'utilisateur
+        $mail->addAddress($_ENV['MAIL_USERNAME']); // Votre adresse e-mail pour recevoir le message
+        $mail->Subject = 'Message de : ' . $name . ' - ' . $subject; // Sujet de l'e-mail
+        $mail->Body = "Nom: $name\nEmail: $userEmail\n\nMessage:\n$message"; // Corps du message
 
-    $headers = "From: $from_name <$from_email>\r\n";
-    $headers .= "Reply-To: $from_email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
-    // Envoi de l'email
-    if (mail($to, $email_subject, $email_body, $headers)) {
-        echo "Votre message a été envoyé avec succès. Merci!";
-    } else {
-        echo "Une erreur est survenue lors de l'envoi. Veuillez réessayer plus tard.";
+        // Tentative d'envoi de l'e-mail
+        if ($mail->send()) {
+            echo 'Message envoyé avec succès.';
+        } else {
+            echo 'Échec de l\'envoi du message. Erreur: ' . $mail->ErrorInfo;
+        }
+    } catch (Exception $e) {
+        // Afficher l'erreur si l'envoi échoue
+        echo "Le message n'a pas pu être envoyé. Erreur: {$e->getMessage()}";
     }
 } else {
-    echo "Méthode de requête non valide.";
-
+    echo 'Aucune donnée reçue.';
 }
-
 ?>
