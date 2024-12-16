@@ -9,7 +9,6 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -42,29 +41,28 @@
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">ABPEDD</h1>
         <span>.</span>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Acceuil<br></a></li>
+          <li><a href="#hero" class="active">Acceuil</a></li>
           <li><a href="#about">A propos</a></li>
           <li><a href="#evenements" class="btn-event">Événements</a></li>
           <li><a href="#team">Equipe</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="join.html" class="btn-join">Rejoindre l'Association</a></li>
+
+          <!-- Ajoutez le bouton Faire un Don ici pour l'inclure dans le menu mobile -->
+          <li><a href="don.html" class="btn-donate-mobile">Faire un Don</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a href="#don" class="btn-donate">Faire un Don</a>
-
     </div>
-  </header>
+</header>
+
 
   <main class="main">
 
@@ -81,39 +79,32 @@
             <p>Une initiative des jeunes Burkinabè pour un avenir durable</p>
           </div>
         </div>
-
-        <div class="row gy-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
-              <i class="bi bi-binoculars"></i>
-              <h3><a href="">Lorem Ipsum</a></h3>
-            </div>
+        <div class="features">
+          <div class="feature-item" data-aos="fade-up">
+            <i class="bi bi-megaphone feature-icon"></i>
+            <h3>Sensibilisation</h3>
+            <p>Éducation et sensibilisation à la protection de l'environnement.</p>
           </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon-box">
-              <i class="bi bi-bullseye"></i>
-              <h3><a href="">Dolor Sitema</a></h3>
-            </div>
+          
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+            <i class="bi bi-people feature-icon"></i>
+            <h3>Actions Communautaires</h3>
+            <p>Organiser des événements pour un impact local.</p>
           </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-box">
-              <i class="bi bi-fullscreen-exit"></i>
-              <h3><a href="">Sedare Perspiciatis</a></h3>
-            </div>
+          
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-globe feature-icon"></i>
+            <h3>Soutien aux Initiatives</h3>
+            <p>Accompagner les projets pour un développement durable.</p>
           </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon-box">
-              <i class="bi bi-card-list"></i>
-              <h3><a href="">Magni Dolores</a></h3>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="700">
-            <div class="icon-box">
-              <i class="bi bi-gem"></i>
-              <h3><a href="">Nemos Enimade</a></h3>
-            </div>
+          
+          <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-tree feature-icon"></i> 
+            <h3>Protection de la Biodiversité</h3>
+            <p>Préserver les ressources naturelles pour les générations futures.</p>
           </div>
         </div>
+        
 
       </div>
 
@@ -128,7 +119,7 @@
         <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="assets/img/eco1.webp" class="d-block w-100 carousel-image" alt="Image 1">
+              <img src="assets/img/eco1.jpeg" class="d-block w-100 carousel-image" alt="Image 1">
               <div class="carousel-caption carousel-overlay">
                 <p>Association Burkinabè pour la Protection de l'Environnement et le Développement Durable.</p>
               </div>
@@ -367,24 +358,14 @@
     </section>
     
 
-    <!-- Call To Action Section -->
-    <section id="call-to-action" class="call-to-action section dark-background">
-
-      <img src="assets/img/sav3.jpg" alt="">
-
-      <div class="container">
-        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
-          <div class="col-xl-10">
-            <div class="text-center">
-              <h3>Call To Action</h3>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a class="cta-btn" href="#">Call To Action</a>
-            </div>
-          </div>
-        </div>
+    <section id="action-environnement" class="action-environnement">
+      <div class="action-container" data-aos="fade-up">
+        <h2>Agissez pour la Planète</h2>
+        <p>Rejoignez-nous dans notre mission pour protéger et préserver notre environnement. Ensemble, nous pouvons créer un avenir durable pour les générations futures. Participez à nos actions et faites une différence dès aujourd'hui !</p>
+        <a href="join.html" class="action-button">Rejoignez Notre Mouvement</a>
       </div>
-
-    </section><!-- /Call To Action Section -->
+    </section>
+    <!-- /Call To Action Section -->
 
 
     <section id="evenements" class="evenements-section">
@@ -441,189 +422,43 @@
     
     
    
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 align-items-center justify-content-between">
-
-          <div class="col-lg-5">
-            <img src="assets/img/stats-img.jpg" alt="" class="img-fluid">
-          </div>
-
+    <section id="achievements" class="achievements-section">
+      <div class="container">
+        <div class="row align-items-center">
           <div class="col-lg-6">
-
-            <h3 class="fw-bold fs-2 mb-3">Voluptatem dignissimos provident quasi</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-            </p>
-
-            <div class="row gy-4">
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-emoji-smile flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-journal-richtext flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-headset flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-
-              <div class="col-lg-6">
-                <div class="stats-item d-flex">
-                  <i class="bi bi-people flex-shrink-0"></i>
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-                    <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
-                  </div>
-                </div>
-              </div><!-- End Stats Item -->
-
+            <img src="assets/img/b.jpg" alt="Notre Impact" class="img-fluid rounded">
+          </div>
+          <div class="col-lg-6">
+            <h2 class="impact-title-left">Notre Impact</h2>
+            <p class="impact-description">Nous œuvrons chaque jour pour protéger notre environnement et sensibiliser les générations futures. Découvrez nos réalisations et rejoignez notre mission pour un avenir durable.</p>
+            <div class="row stats">
+              <div class="col-6 stat-item" data-aos="fade-up">
+                <i class="bi bi-clipboard-check stat-icon"></i>
+                <h3>+20</h3>
+                <p>Projets de Protection</p>
+              </div>
+              <div class="col-6 stat-item" data-aos="fade-up" data-aos-delay="100">
+                <i class="bi bi-people stat-icon"></i>
+                <h3>+100</h3>
+                <p>Volontaires Engagés</p>
+              </div>
+              <div class="col-6 stat-item" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-clock-history stat-icon"></i>
+                <h3>+150</h3>
+                <p>Heures de Sensibilisation</p>
+              </div>
+              <div class="col-6 stat-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-geo-alt stat-icon"></i>
+                <h3>+45</h3>
+                <p>Communautés Impactées</p>
+              </div>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
-    </section><!-- /Stats Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section dark-background">
-
-      <img src="assets/img/sav6.webp" class="testimonials-bg" alt="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
+    </section>
+    <!-- /Stats Section -->
+    
     <!-- Team Section -->
     <section id="team" class="team section">
 
@@ -643,9 +478,9 @@
                 <img src="assets/img/team/team-1.jpeg" class="img-fluid" alt="">
                 <div class="social">
                   <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href="https://www.facebook.com/profile.php?id=61564528104095"><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.facebook.com/Fab95Fab"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/soleil_de_minuit_07?igsh=bTBtNG1kZ3h5bjdm"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/fabrice-yameogo-8a5139285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -660,10 +495,10 @@
               <div class="member-img">
                 <img src="assets/img/team/team-2.jpeg" class="img-fluid" alt="">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter-x"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                  <a href="https://x.com/Amar540351"><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://www.facebook.com/share/ZjXz4HjSsfiivutg/?mibextid=LQQJ4d"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/armiyah827"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/amar-coulibaly-972353304/"><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -705,6 +540,42 @@
               <div class="member-info">
                 <h4>Karambiri Arnold</h4>
                 <span>Ingenieur en Informatique(developeur full stack)</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/team-5.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=61564528104095"><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Ouedraogo Mohamed Haidara</h4>
+                <span>Secrétaire adjoint</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="assets/img/team/team-6.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href="https://www.facebook.com/romba.faissal.1?mibextid=ZbWKwL"><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Romba Faical</h4>
+                <span>Promotteur</span>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -820,7 +691,7 @@
             <div class="footer-contact pt-3">
               <p>Burkina Faso</p>
               <p class="mt-3"><strong>Phone:</strong> <span>+226 72 94 41 06</span></p>
-              <p><strong>Email:</strong> <span>yameogofabrice@gmail.com</span></p>
+              <p><strong>Email:</strong> <span>abpedd@gmail.com</span></p>
             </div>
             <div class="social-links d-flex mt-4">
               <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -829,28 +700,15 @@
               <a href=""><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Privacy policy</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#hero"> Acceuil</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#about"> A propos</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#evenements"> evenements</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-12 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
 
         </div>
       </div>
@@ -858,13 +716,12 @@
 
     <div class="copyright">
       <div class="container text-center">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">GP</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">ABPEDD</strong> <span>All Rights Reserved</span></p>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
           <!-- You can delete the links only if you've purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
       </div>
     </div>
@@ -923,6 +780,28 @@
     function shrinkActivity(element) {
         element.classList.remove("expanded");
     }
+    document.addEventListener("DOMContentLoaded", function() {
+    let slides = document.querySelectorAll(".eco-testimonial-slide");
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            slide.style.opacity = "0";
+        });
+        slides[index].classList.add("active");
+        slides[index].style.opacity = "1";
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Défilement automatique toutes les 5 secondes
+    setInterval(nextSlide, 5000);
+});
+
     </script>
     
 </body>

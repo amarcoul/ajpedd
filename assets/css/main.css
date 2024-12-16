@@ -2048,3 +2048,285 @@ section,
   color: #ffc451; /* Couleur des icônes */
   margin-right: 15px;
 }
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  color: #ffffff;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: #ffc451; /* Couleur pour les icônes */
+  margin-bottom: 10px;
+}
+
+.feature-item h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.action-environnement {
+  background: rgba(0, 0, 0, 0.7) url('assets/img/environment-bg.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 60px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.action-environnement h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffc451;
+}
+
+.action-environnement p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+.action-button {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background-color: #ffc451;
+  border: 2px solid #ffc451;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: transparent;
+  color: #ffc451;
+  border-color: #ffc451;
+}
+
+.achievements-section {
+  padding: 60px 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.achievements-section h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffc451;
+  margin-bottom: 15px;
+}
+
+.achievements-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stats {
+  margin-top: 20px;
+}
+
+.stat-item {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.stat-item h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.stat-item p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.impact-title-left {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #28a745; /* Une couleur verte pour l'environnement */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre pour donner de la profondeur */
+}
+
+.impact-title-left::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 4px;
+  background-color: #ffc451; /* Couleur dorée pour contraste */
+  transition: width 0.3s ease;
+}
+
+.impact-title-left:hover::before {
+  width: 100%; /* Élargit la barre en bas lors du survol */
+}
+
+.impact-title-left::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffc451;
+  border-radius: 50%; /* Cercle décoratif */
+}
+
+.eco-testimonial-section {
+    background: url('assets/img/forest-background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
+    color: #ffffff;
+}
+
+.eco-testimonial-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.eco-testimonial-slide {
+    display: none; /* Masquer les autres témoignages */
+    transition: opacity 1s ease-in-out;
+}
+
+.eco-testimonial-slide.active {
+    display: block; /* Afficher uniquement le témoignage actif */
+}
+
+.eco-testimonial-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #ffc451;
+    margin-bottom: 15px;
+}
+
+.eco-testimonial-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #ffc451;
+}
+
+.eco-testimonial-role {
+    font-size: 1rem;
+    color: #c2c2c2;
+    margin-bottom: 10px;
+}
+
+.eco-testimonial-stars {
+    color: #ffc451;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.eco-testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-style: italic;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.join-section {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 120px 20px 60px 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.join-section h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.join-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.join-section form div {
+  text-align: left;
+}
+
+.join-section input,
+.join-section textarea,
+.join-section button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.join-section button {
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.join-section button:hover {
+  background: #45a049;
+}

@@ -1,44 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faire un Don</title>
-  <link href="assets/css/main.css" rel="stylesheet">
+  <title>Faire un Don - ABPEDD</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Inclure Bootstrap Icons (facultatif) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.2/font/bootstrap-icons.min.css">
 </head>
-
 <body>
-  <header>
-    <!-- Inclure la même barre de navigation que dans index.html -->
-  </header>
 
-  <main>
-    <section class="don-section">
-      <div class="container">
-        <h2>Faire un Don</h2>
-        <p>Votre soutien nous aide à continuer notre mission de protection de l'environnement et de développement durable. Chaque don compte !</p>
-        
-        <!-- Formulaire de don -->
-        <form action="process_donation.php" method="post">
-          <label for="donation-amount">Montant du don :</label>
-          <input type="number" id="donation-amount" name="donation_amount" required min="1" placeholder="Montant en €">
-          
-          <label for="name">Nom :</label>
-          <input type="text" id="name" name="name" required placeholder="Votre nom">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">ABPEDD</a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="events.html">Événements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="don.html" class="don-link">Faire un Don</a></li>
+      </ul>
+    </div>
+  </nav>
 
-          <label for="email">Email :</label>
-          <input type="email" id="email" name="email" required placeholder="Votre email">
-          
-          <button type="submit" class="btn-donate">Faire un Don</button>
-        </form>
-      </div>
-    </section>
-  </main>
+  <!-- Section de Don -->
+  <section class="don-section">
+    <div class="don-container">
+      <h1 class="don-title">Faites un Don pour Soutenir Notre Cause</h1>
+      <p class="don-description">Votre générosité aide à préserver notre environnement et à promouvoir le développement durable. Ensemble, nous pouvons faire la différence.</p>
+      
+      <form class="don-form">
+        <div class="form-group">
+          <label for="name">Nom Complet</label>
+          <input type="text" id="name" placeholder="Entrez votre nom complet" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Entrez votre email" required>
+        </div>
+        <div class="form-group">
+          <label for="amount">Montant du Don (€)</label>
+          <input type="number" id="amount" placeholder="Montant du don" required min="1">
+        </div>
+        <button type="submit" class="don-button">Faire un Don</button>
+      </form>
+    </div>
+  </section>
 
-  <footer>
-    <!-- Inclure le pied de page ici -->
-  </footer>
 </body>
-
 </html>
